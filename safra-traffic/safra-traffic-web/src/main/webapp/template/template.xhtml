@@ -23,23 +23,20 @@
 
 <h:body class="home">
 	<!-- Header -->
-	<header class="header" role="banner">
-	<div class="wrap">
-		<!-- Logo -->
-		<div class="logo">
-			<ui:include src="/template/logo.xhtml" />
-		</div>
-		<!-- //Logo -->
-
-		<!-- Main Nav -->
-		<nav role="navigation" class="main-nav"> 
-			<ui:include
-			src="/template/navigation.xhtml" /> 
-		</nav>
-		<!-- //Main Nav -->
-	</div>
-	</header>
+		<ui:include src="/template/header.xhtml" />
 	<!-- //Header -->
-
+	
+	<div id="main">
+		<div id="navigation">
+			<ui:include src="/template/container.xhtml" />
+		</div>
+		<div id="content">
+			<ui:insert name="pageContent" />
+		</div>
+	</div>
+	
+	<!-- Footer -->
+		<ui:include src="/template/footer.xhtml" />
+	<!-- //Footer -->
 </h:body>
 </html>
